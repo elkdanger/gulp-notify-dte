@@ -1,10 +1,9 @@
 {
   "name": "gulp-notify-dte",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A gulp plugin for notifying Visual Studio's EnvDTE of file changes",
   "main": "plugin.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/elkdanger/gulp-notify-dte.git"
