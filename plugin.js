@@ -18,8 +18,10 @@ function gulpVSDTE(config) {
     
     return through.obj(function (file, enc, cb) {
                         
+        // Record the path for sending to EnvDTE
         files.push(file.path)
 
+        // Spit the file back into the pipeline without modification
         this.push(file)
 
         cb()
