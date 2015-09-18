@@ -1,13 +1,20 @@
 ﻿var through = require('through2')
 var gutil = require('gulp-util')
 var superagent = require('superagent')
+var extend = require('extend')
 
 var PluginError = gutil.PluginError
 
-function gulpVSDTE() {
+var defaultConfig = {
+    port: 23956
+}
 
+function gulpVSDTE(config) {
+    
+    var options = extend({}, defaultConfig, config || {});
     var files = []
-    var endpoint = 'http://localhost:23956/project/files'
+    
+    var endpoint = 'http://localhost:' + options.port + '/project/files'
     
     return through.obj(function (file, enc, cb) {
                         
