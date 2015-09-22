@@ -2,7 +2,7 @@
 var gutil = require('gulp-util')
 var superagent = require('superagent')
 var extend = require('extend')
-var pkg = require('../package.json')
+var pkg = require('../../package.json')
 
 var PluginError = gutil.PluginError
 
