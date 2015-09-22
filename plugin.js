@@ -2,12 +2,13 @@
 var gutil = require('gulp-util')
 var superagent = require('superagent')
 var extend = require('extend')
+var pkg = require('../package.json')
 
 var PluginError = gutil.PluginError
 
-var defaultConfig = {
+var defaultConfig = extend({
     port: 23956
-}
+}, pkg.notifyDte || {});
 
 function gulpVSDTE(config) {
     
